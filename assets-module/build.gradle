@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+group 'com.delight.news'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'software.amazon.awssdk', name: 's3', version: '2.20.52'
+    implementation group: 'co.elastic.thumbnails4j', name: 'thumbnails4j-image', version: '1.0.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}

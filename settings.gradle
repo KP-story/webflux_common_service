@@ -1,0 +1,6 @@
+rootProject.name = 'news'
+include 'auth-module'
+include 'assets-module'
+include 'notify-module'
+
+

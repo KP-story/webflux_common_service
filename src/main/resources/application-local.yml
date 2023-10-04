@@ -1,0 +1,36 @@
+spring:
+  auth-datasource:
+    url: r2dbc:pool:postgresql://localhost:5432/postgres?currentSchema=auth
+    user: postgres
+    password: khanhlv123
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    minimumIdle: 1
+    maximumPoolSize: 1
+  assets-datasource:
+    url: r2dbc:pool:postgresql://localhost:5432/postgres?currentSchema=assets
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 1
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 1
+  notify-datasource:
+    url: r2dbc:pool:postgresql://localhost:5432/postgres?currentSchema=notification
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 1
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 1
+
+auth:
+  privateKey: 123maxjtqkckao123mcaxmawdmajqdax
+  idTokenExpiration: 3
+  refreshTokenExpiration: 720
+  issuer: iam.delight.com
+  kid: 0
+assets:
+  rootDir: "~/file"
+  domain: "http://localhost:80/assets"
+server:
+  port: 8090
+logging:
+  config: src/main/resources/logback-local.xml

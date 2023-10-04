@@ -1,0 +1,45 @@
+spring:
+  auth-datasource:
+    url: r2dbc:pool:postgresql://database-1.crtpcj7lfrd8.ap-southeast-1.rds.amazonaws.com:5432/postgres?currentSchema=auth
+    user: postgres
+    password: khanhlv123
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    minimumIdle: 5
+    maximumPoolSize: 100
+  news-datasource:
+    url: r2dbc:pool:postgresql://database-1.crtpcj7lfrd8.ap-southeast-1.rds.amazonaws.com:5432/postgres?currentSchema=news
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 5
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 100
+  assets-datasource:
+    url: r2dbc:pool:postgresql://database-1.crtpcj7lfrd8.ap-southeast-1.rds.amazonaws.com:5432/postgres?currentSchema=assets
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 5
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 100
+  notify-datasource:
+    url: r2dbc:pool:postgresql://database-1.crtpcj7lfrd8.ap-southeast-1.rds.amazonaws.com:5432/postgres?currentSchema=notification
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 5
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 100
+  chat-datasource:
+    url: r2dbc:pool:postgresql://database-1.crtpcj7lfrd8.ap-southeast-1.rds.amazonaws.com:5432/postgres?currentSchema=chat
+    user: postgres
+    password: khanhlv123
+    minimumIdle: 5
+    dialect: org.springframework.data.r2dbc.dialect.PostgresDialect
+    maximumPoolSize: 100
+auth:
+  privateKey: 123maxjtqkckao123mcaxmawdmajqdax
+  idTokenExpiration: 3
+  refreshTokenExpiration: 720
+  issuer: iam.delight.com
+  kid: 0
+assets:
+  rootDir: "/file"
+  domain: "https://api.wordspecker.com/assets"

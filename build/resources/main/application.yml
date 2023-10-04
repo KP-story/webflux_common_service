@@ -1,0 +1,38 @@
+spring:
+  codec:
+    max-in-memory-size: 100MB
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  profiles:
+    active: local
+  application:
+    name: fresh-booking
+timezone:
+  default: Asia/Ho_Chi_Minh
+server:
+  port: 8090
+http-clients:
+  - name: fb-client
+    baseUrl: https://graph.facebook.com/v10.0/
+  - name: gg-oauth-client
+    baseUrl: https://oauth2.googleapis.com/
+  - name: apple-oauth-client
+    baseUrl: https://appleid.apple.com/auth/
+websocket:
+  endpoint: /ws
+  maxConnection: 10000
+  connectionIdleTime: 120000
+auth:
+  maxSession: 5
+account:
+  avatarAsset: account_avatar
+chat:
+  avatarAsset: chat_channel_avatar
+brokers:
+  - name: local
+    engine: LOCAL_FLUX
+messaging-server:
+  address:
+    host: 0.0.0.0
+    port: 2603
